@@ -1,6 +1,6 @@
 # Salesforce Big Objects
 
-## Salesforce Dreamforce 2018 Session
+## What are Big Objects?
 
 <ul>
 <li>Big objects allow you to store and manage a massive amount of data on the Salesforce platform.</li>
