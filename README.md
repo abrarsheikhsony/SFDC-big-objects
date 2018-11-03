@@ -96,11 +96,12 @@ There are two (2) main ways of populating Big objects.
 <ul>
 <li>For SOQL queries with big objects, you have to build your query starting from the first field defined in the index, without skipping any fields between the first and last field in the query.</li>
 <li>If your index defines three fields, you can’t create a query using only the first and third fields.</li>
+<li><img src="supportedimages/image1.png"/></li>
 <li>You can use these comparison operators =, <, >, <=, >=, or IN on the last field in your query.</li>
 <li>Any prior fields in your query can only use the = operator.</li>
 <li>The !=, LIKE, NOT IN, EXCLUDES, and INCLUDES operators aren’t valid in any query involving big objects.</li>
 <li>You can't add a field in filter that is not listed as indexes in Big Object metadata.</li>
-<li><img src="supportedimages/image1.png"/></li>
+<li><img src="supportedimages/image2.png"/></li>
 </ul>
 
 ## How to use Async SOQL to query Big Objects?
@@ -118,23 +119,16 @@ There are two (2) main ways to use Async SOQL to get a manageable dataset out of
 </ul>
 </ol>
 
-
-
-
-
-
-
-<ul>
-<li>Coffee</li>
-</ul>
-
+## Considerations
 <ol type="1">
-<li>TEST</li>
+<li>Big Object has its own storage (Storage Usage).</li>
+<li>You can define custom big objects only through the Metadata API.</li>
+<li>Big objects support only object and field permissions.</li>
+<li>Big objects ONLY support custom Salesforce Lightning and Visualforce components.</li>
+<li>You can create up to 100 big objects per org.</li>
+<li>To support the scale of data in a big object, you can’t use triggers, flows, processes, and the Salesforce app.</li>
+<li>Custom Big objects use the CustomObject metadata type.</li>
 </ol>
-
-
-
-<img src="supportedimages/image2.png"/>
 
 ## Salesforce Trailhead
 <ul>
