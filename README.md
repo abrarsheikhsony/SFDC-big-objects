@@ -64,6 +64,38 @@ There are two (2) main ways of populating Big objects.
 </ul>
 </ol>
 
+## When to use SOQL vs Async SOQL?
+
+<table>
+	<tr>
+		<th colspan="2">SOQL vs Async SOQL</th>
+	</tr>
+	<tr>
+		<th>Use standard SOQL when</th>
+		<th>Use Async SOQL when</th>
+	</tr>
+	<tr>
+		<td>
+			<ul>
+				<li>You want to display the results in the UI without having the user wait for results.</li>
+				<li>You want results returned immediately for manipulation within a block of Apex code.</li>
+				<li>You know that the query will return a small amount of data.</li>
+			</ul>
+		</td>
+		<td>
+			<ul>
+				<li>You are querying against millions of records.</li>
+				<li>You want to ensure that your query completes.</li>
+				<li>You don’t need to do aggregate queries or filtering outside of the index.</li>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+
+
+
+
 
 
 
