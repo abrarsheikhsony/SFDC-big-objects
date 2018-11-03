@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+     
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Customer_Interaction__b.In_Game_Purchase__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+     
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Customer_Interaction__b.Level_Achieved__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+     
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Customer_Interaction__b.Lives_This_Game__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+     
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Customer_Interaction__b.Play_Duration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+     
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Customer_Interaction__b.Score_This_Game__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+     
+     <label>Customer Interaction Permission Set</label>
+</PermissionSet>
