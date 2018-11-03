@@ -25,6 +25,45 @@ To define a custom Big object, you create:
 </ul>
 </ol>
 
+## Create a Custom Big Object
+To get started, you need to create at least 2 XML files:
+<ol type="1">
+<li>An object file = A Big object’s API name is identified with the suffix “__b”.</li>
+<li>A permissionset or profile file = By default, access to custom Big objects is restricted.</li>
+</ol>
+
+## Populating data in Big Objects
+There are two (2) main ways of populating Big objects.
+<ol type="1">
+<li>You can use a .csv file and Bulk API or SOAP API to upload data into a Big object via Workbench.</li>
+<li>Do it entirely in Apex = If you want to use Apex to populate data, use the "insertImmediate" DML operation.</li>
+</ol>
+
+## Querying Big Objects
+<ol type="1">
+<li>standard SOQL</li>
+<ul>
+<li>If you only need a small dataset from a big object, or if you need the results immediately, use standard SOQL.</li>
+</ul>
+<li>Async SOQL</li>
+<ul>
+<li>Async SOQL is implemented via the Chatter REST API.</li>
+<li>Async SOQL uses a subset of SOQL commands.</li>
+<li>Async SOQL is a way to run SOQL queries in situations where you can’t wait for the results in real time due to the sheer size of the data being queried.</li>
+<li>Async SOQL schedules and runs queries asynchronously in the background, so it can run queries that normally time out with regular SOQL.</li>
+<li>With Async SOQL, you can run multiple queries in the background while monitoring their completion status.</li>
+<li>Async SOQL queries run in the background, and can be run over Salesforce entity data, standard objects, custom objects, and big objects.</li>
+<li>Async SOQL is the most efficient way to process the large amount of data in a big object.</li>
+<li>Generally, you want to use Async SOQL over standard SOQL when you’re dealing with large amounts of data.</li>
+<li>Other Considerations of Async SOQL</li>
+<ul>
+<li>Async SOQL is included only with the licensing of additional Big Object capacity.</li>
+<li>Async SOQL also works on standard and non-big custom objects, but support for those objects is in Pilot.</li>
+</ul>
+<li>Coffee</li>
+</ul>
+</ol>
+
 
 
 
