@@ -92,7 +92,31 @@ There are two (2) main ways of populating Big objects.
 	</tr>
 </table>
 
+## How to use standard SOQL to query Big Objects?
+<ul>
+<li>For SOQL queries with big objects, you have to build your query starting from the first field defined in the index, without skipping any fields between the first and last field in the query.</li>
+<li>If your index defines three fields, you can’t create a query using only the first and third fields.</li>
+<li>You can use these comparison operators =, <, >, <=, >=, or IN on the last field in your query.</li>
+<li>Any prior fields in your query can only use the = operator.</li>
+<li>The !=, LIKE, NOT IN, EXCLUDES, and INCLUDES operators aren’t valid in any query involving big objects.</li>
+<li>You can't add a field in filter that is not listed as indexes in Big Object metadata.</li>
+<li><img src="supportedimages/image1.png"/></li>
+</ul>
 
+## How to use Async SOQL to query Big Objects?
+There are two (2) main ways to use Async SOQL to get a manageable dataset out of a big object.
+<ol type="1">
+<li>The first is to use filtering.</li>
+<ul>
+<li>You can use filtering to extract a small subset of your big object data into a custom object.</li>
+<li>You can then use it in your reports, dashboards, or other nifty analytic tool.</li>
+</ul>	
+<li>The other way to create a manageable dataset is through coarse aggregations.</li>
+<ul>
+<li>These are the aggregate functions supported by Async SOQL: AVG(field), COUNT(field), COUNT_DISTINCT(field), SUM(field), MIN(field), MAX(field).</li>
+<li>Chatter REST API URL = https://yourInstance.salesforce.com/services/data/v41.0/async-queries/</li>
+</ul>
+</ol>
 
 
 
@@ -109,7 +133,7 @@ There are two (2) main ways of populating Big objects.
 </ol>
 
 
-<img src="supportedimages/image1.png"/>
+
 <img src="supportedimages/image2.png"/>
 
 ## Salesforce Trailhead
