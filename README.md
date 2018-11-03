@@ -60,7 +60,6 @@ There are two (2) main ways of populating Big objects.
 <li>Async SOQL is included only with the licensing of additional Big Object capacity.</li>
 <li>Async SOQL also works on standard and non-big custom objects, but support for those objects is in Pilot.</li>
 </ul>
-<li>Coffee</li>
 </ul>
 </ol>
 
