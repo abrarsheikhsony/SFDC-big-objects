@@ -119,6 +119,9 @@ There are two (2) main ways to use Async SOQL to get a manageable dataset out of
 </ul>
 </ol>
 
+## High Level Data Archival Solution Design
+<img src="supportedimages/image3.jpeg"/>
+
 ## Considerations
 <ol type="1">
 <li>Big Object has its own storage (Storage Usage).</li>
